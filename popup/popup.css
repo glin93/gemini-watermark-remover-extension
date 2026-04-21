@@ -1,0 +1,142 @@
+:root {
+  color-scheme: light;
+  --bg: #f4efe6;
+  --ink: #152018;
+  --muted: #526256;
+  --card: rgba(255, 252, 246, 0.88);
+  --line: rgba(21, 32, 24, 0.12);
+  --accent: #1d7c47;
+  --accent-dark: #14532d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 340px;
+  background:
+    radial-gradient(circle at top right, rgba(34, 197, 94, 0.18), transparent 34%),
+    linear-gradient(180deg, #f8f4ec 0%, var(--bg) 100%);
+  color: var(--ink);
+  font: 14px/1.45 "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.shell {
+  padding: 18px;
+}
+
+.hero {
+  padding: 4px 2px 14px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font: 700 24px/1.05 Georgia, "Times New Roman", serif;
+}
+
+.copy {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 14px 30px rgba(27, 40, 32, 0.08);
+  margin-top: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.row + .row {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.row strong,
+.stat strong {
+  display: block;
+}
+
+.row small,
+.stat-label {
+  display: block;
+  color: var(--muted);
+}
+
+select,
+button,
+input[type="checkbox"] {
+  font: inherit;
+}
+
+select {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px 10px;
+}
+
+input[type="checkbox"] {
+  inline-size: 20px;
+  block-size: 20px;
+  accent-color: var(--accent);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: end;
+}
+
+.stat {
+  min-width: 0;
+}
+
+.stat strong {
+  margin-top: 4px;
+  font-size: 17px;
+}
+
+.ghost {
+  grid-column: 1 / -1;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--accent-dark);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.ghost:hover {
+  background: rgba(20, 83, 45, 0.06);
+}
+
+.foot {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.foot p {
+  margin: 0;
+}

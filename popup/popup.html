@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gemini Clean Local</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Gemini Clean Local</p>
+        <h1>本地一键净化下载</h1>
+        <p class="copy">没有试用限制，没有订阅，没有外发统计。加载后会把 Gemini 原生下载按钮增强成可直接净化下载的版本。</p>
+      </section>
+
+      <section class="card">
+        <label class="row toggle-row">
+          <span>
+            <strong>启用净化</strong>
+            <small>关闭后不拦截原生下载。</small>
+          </span>
+          <input id="enabled" type="checkbox">
+        </label>
+
+        <label class="row">
+          <span>
+            <strong>导出格式</strong>
+            <small>PNG 最保守，二次压缩痕迹最少。</small>
+          </span>
+          <select id="outputFormat">
+            <option value="png">PNG</option>
+            <option value="webp">WebP</option>
+            <option value="jpeg">JPEG</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="card stats">
+        <div class="stat">
+          <span class="stat-label">本地已处理</span>
+          <strong id="totalCleaned">0</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">最近一次</span>
+          <strong id="lastCleanedAt">Never</strong>
+        </div>
+        <button id="resetStats" class="ghost">重置计数</button>
+      </section>
+
+      <section class="foot">
+        <p>在 Chrome 里用 <strong>Load unpacked</strong> 加载这个目录，打开 Gemini 或 AI Studio，然后点击带绿色描边和 <strong>Clean</strong> 标记的原生下载按钮。</p>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+  </html>
