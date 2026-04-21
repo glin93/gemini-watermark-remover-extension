@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Gemini Clean Local",
+  "name": "Gemini Watermark Remover",
   "version": "0.1.0",
-  "description": "Local-only Gemini image cleaner with easier one-click download buttons.",
+  "description": "Local-only browser extension that removes watermarks from Gemini / AI Studio images on download.",
   "action": {
     "default_popup": "popup/popup.html"
   },

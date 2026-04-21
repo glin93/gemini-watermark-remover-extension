@@ -1,8 +1,8 @@
-# Gemini Clean Local
+# Gemini Watermark Remover (Browser Extension)
 
-一个本地运行的 Chrome/Edge 扩展，用来增强 Gemini 与 AI Studio 的原生下载按钮，让保存生成图片时更干净、更省事。
+一个本地运行的 Chrome/Edge 扩展，用来去掉 Gemini 与 AI Studio 生成图片右下角的水印 —— 直接增强原生下载按钮，点一下就拿到干净的图。
 
-A local-only Chrome / Edge extension that upgrades the native download button in Gemini and AI Studio so you can save generated images in one click.
+A local-only Chrome / Edge extension that strips the watermark from images generated in Gemini and AI Studio by upgrading the native download button in place.
 
 ## 特性 / Features
 
@@ -16,7 +16,7 @@ A local-only Chrome / Edge extension that upgrades the native download button in
 
 ## 安装方式一：从 Release 下载（推荐） / Install from Release (recommended)
 
-1. 到 [Releases](https://github.com/glin93/gemini-clean-local/releases) 下载最新的 `gemini-clean-local-vX.Y.Z.zip`
+1. 到 [Releases](https://github.com/glin93/gemini-watermark-remover-extension/releases) 下载最新的 `gemini-watermark-remover-extension-vX.Y.Z.zip`
 2. 解压到任意目录（请保留解压后的文件夹）
 3. 打开 `chrome://extensions`（Edge 为 `edge://extensions`）
 4. 打开右上角 **Developer mode / 开发者模式**
@@ -28,10 +28,10 @@ A local-only Chrome / Edge extension that upgrades the native download button in
 ## 安装方式二：从源码加载 / Install from source
 
 ```bash
-git clone https://github.com/glin93/gemini-clean-local.git
+git clone https://github.com/glin93/gemini-watermark-remover-extension.git
 ```
 
-然后按上面第 3–5 步操作，在 **Load unpacked** 时选择 clone 下来的 `gemini-clean-local` 目录。
+然后按上面第 3–5 步操作，在 **Load unpacked** 时选择 clone 下来的 `gemini-watermark-remover-extension` 目录。
 
 ## 使用 / Usage
 
@@ -60,7 +60,9 @@ popup/
 
 ## 致谢 / Acknowledgements
 
-思路参考 [GargantuaX/gemini-watermark-remover](https://github.com/GargantuaX/gemini-watermark-remover) 使用的反向 Alpha 混合思路，这里做成了常驻浏览器扩展形态，让下载流程更顺。
+去水印思路参考 [GargantuaX/gemini-watermark-remover](https://github.com/GargantuaX/gemini-watermark-remover) 的反向 Alpha 混合算法，这里做成了常驻浏览器扩展形态，让下载流程更顺。
+
+The watermark-removal approach is based on the reverse alpha-blending algorithm from [GargantuaX/gemini-watermark-remover](https://github.com/GargantuaX/gemini-watermark-remover); this project packages it as a persistent browser extension integrated into the download flow.
 
 ## License
 
